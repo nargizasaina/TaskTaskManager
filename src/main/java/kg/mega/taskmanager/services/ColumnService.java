@@ -9,7 +9,6 @@ import kg.mega.taskmanager.models.dtos.ColumnDto;
 import java.util.List;
 
 public interface ColumnService {
-//    List<Column> createColumns(ProjectDto projectDto, Project project);
 
     Column createColumn(ColumnCreationDto columnCreationDto);
 

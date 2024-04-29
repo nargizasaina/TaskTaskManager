@@ -11,4 +11,9 @@ public interface ProjectRepo extends JpaRepository<Project, Long> {
     Project getProjectById(Long id);
 
     Project findProjectByProjectCode(String code);
+
+//    String findProjectCodeById(Long id);
+
+    @Query("SELECT p.projectCode FROM Project p WHERE p.id = :id")
+    String findProjectCodeById(Long id);
 }

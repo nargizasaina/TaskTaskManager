@@ -10,6 +10,7 @@ public class Task {
     Long id;
     String name;
     String taskCode;
+    Integer taskNumber;
     @ManyToOne
     @JoinColumn(name = "column_id")
     Column column;
@@ -55,5 +56,13 @@ public class Task {
 
     public void setProject(Project project) {
         this.project = project;
+    }
+
+    public Integer getTaskNumber() {
+        return taskNumber;
+    }
+
+    public void setTaskNumber(Integer taskNumber) {
+        this.taskNumber = taskNumber;
     }
 }

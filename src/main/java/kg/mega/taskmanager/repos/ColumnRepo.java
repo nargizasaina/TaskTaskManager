@@ -14,4 +14,6 @@ public interface ColumnRepo extends JpaRepository<Column, Long> {
     Integer getLastOrderNum(Long id);
 
     List<Column> findAllByProjectAndIdIn(Project project, List<Long> columnIds);
+
+    Column findColumnById(Long columnId);
 }
