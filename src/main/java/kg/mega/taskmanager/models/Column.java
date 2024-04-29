@@ -13,6 +13,7 @@ import lombok.experimental.FieldDefaults;
 @Table(name = "columns")
 public class Column {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
     int orderNum;
@@ -20,4 +21,44 @@ public class Column {
     @ManyToOne
     @JoinColumn(name = "project_id")
     Project project;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(int orderNum) {
+        this.orderNum = orderNum;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
 }
